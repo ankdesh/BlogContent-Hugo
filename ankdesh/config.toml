@@ -1,0 +1,5 @@
+baseurl = "https://ankdesh.github.io/"
+languageCode = "en-us"
+title = "Ankdesh's Blog site"
+theme = "hugo-theme-learn"
+publishdir = "public"
