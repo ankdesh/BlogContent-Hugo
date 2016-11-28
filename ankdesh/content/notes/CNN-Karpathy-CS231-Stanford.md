@@ -41,3 +41,12 @@ Note that these are notes of the course notes. Only notable things I need to rem
 where the score for the j-th class is \\( s_j = f(x_i, W)_j \\)
 
 - The Multiclass Support Vector Machine "wants" the score of the correct class to be higher than all other scores by at least a margin of delta. If any class has a score higher than the margin, then there will be accumulated loss. Otherwise the loss will be zero. Our objective will be to find the weights that will simultaneously satisfy this constraint for all examples in the training data and give a total loss that is as low as possible.
+
+- L2 Regularization in SVM loss - The most appealing property is that penalizing large weights tends to improve generalization, because it means that no input dimension can have a very large influence on the scores all by itself. For example, suppose that we have some input vector \\(x = [1,1,1,1] \\) and two weight vectors \\(w_1 = [1,0,0,0]\\), \\(w_2 = [0.25,0.25,0.25,0.25] \\). Then \\(w_1^Tx = w_2^Tx = 1\\) so both weight vectors lead to the same dot product, but the L2 penalty of \\(w_1\\) is 1.0 while the L2 penalty of \\(w_2\\) is only 0.25. Therefore, according to the L2 penalty the weight vector \\(w_2\\) would be preferred since it achieves a lower regularization loss. Intuitively, this is because the weights in \\(w_2\\) are smaller and more diffuse. Since the L2 penalty prefers smaller and more diffuse weight vectors, the final classifier is encouraged to take into account all input dimensions to small amounts rather than a few input dimensions and very strongly.
+
+- Softmax classifier - We now interpret the scores as the unnormalized log probabilities for each class and use a cross-entropy loss that has the form: \\(L_i = -\\log\\left(\\frac{e^{f_{y_i}}} \\{ \\sum_j e^{f_j} }\\right) \\)
+where we are using the notation \\(f_j\\) to mean the j-th element of the vector of class scores \\(f\\)
+
+- Information theory view for Softmax classifier - The cross-entropy between a "true" distribution \\(p\\) and an estimated distribution \\(q\\) is defined as: \\( H(p,q) = - \\sum_x p(x) \\log q(x) \\)
+
+The Softmax classifier is hence minimizing the cross-entropy between the estimated class probabilities ( \\(q = e^{f_{y_i}} / \\sum_j e^{f_j} \\) as seen above) and the "true" distribution, which in this interpretation is the distribution where all probability mass is on the correct class (i.e. \\(p = [0, \\ldots 1, \\ldots, 0]\\) contains a single 1 at the \\(y_i\\) -th position.).
