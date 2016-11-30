@@ -1,7 +1,7 @@
 +++
 date = "2016-11-28T10:11:49+05:30"
-next = "/next/path"
-prev = ""
+next = "/notes"
+prev = "/notes"
 title = "Notes for CS231-Stanford"
 toc = true
 weight = 5

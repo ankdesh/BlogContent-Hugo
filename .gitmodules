@@ -1,0 +1,3 @@
+[submodule "ankdesh/public"]
+	path = ankdesh/public
+	url = git@github.com:ankdesh/ankdesh.github.io.git

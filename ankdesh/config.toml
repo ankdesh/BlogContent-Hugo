@@ -3,3 +3,11 @@ languageCode = "en-us"
 title = "Ankdesh's Blog site"
 theme = "hugo-theme-learn"
 publishdir = "public"
+Author = "Ankur Deshwal"
+disqusShortname = "ankdesh"
+
+[original]
+  name = "Ankdesh"
+  homepage = "https://ankdesh.github.io"
+  repo = "https://github.com/ankdesh"
+
