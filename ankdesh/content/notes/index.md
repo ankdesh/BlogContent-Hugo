@@ -5,8 +5,8 @@ icon = "<b>Notes</b>"
 next = "/notes/CNN-Karpathy-CS231-Stanford"
 prev = ""
 title = "index"
+nocomment = true
 weight = 0
-
 +++
 
 ### Notes
