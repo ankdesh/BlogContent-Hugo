@@ -8,12 +8,11 @@ weight = 5
 
 +++
 
-#### Notes for CNN course by Fei Fei, Andrej Karpathy, Justin Johnson 
-#### http://cs231n.stanford.edu/
+#### Notes for CNN course by Fei Fei, Andrej Karpathy, Justin Johnson [http://cs231n.stanford.edu/]
 Note that these are notes of the course notes. Only notable things I need to remember later are noted in the notes below :P 
 
 ***
-#### Lecture 1 - Image classification and the data-driven approach 
+### Lecture 1 - Image classification and the data-driven approach 
 [Image Classification notes](http://cs231n.github.io/classification/)
 
 - L1 vs. L2. It is interesting to consider differences between the two metrics. In particular, the L2 distance is much more unforgiving than the L1 distance when it comes to differences between two vectors. That is, the L2 distance prefers many medium disagreements to one big one. Some more details at (http://www.chioka.in/differences-between-l1-and-l2-as-loss-function-and-regularization/)

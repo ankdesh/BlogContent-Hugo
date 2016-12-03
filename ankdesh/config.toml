@@ -11,3 +11,5 @@ disqusShortname = "ankdesh"
   homepage = "https://ankdesh.github.io"
   repo = "https://github.com/ankdesh"
 
+[params]
+  menu = [ "notes" ]

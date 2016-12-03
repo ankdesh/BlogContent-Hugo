@@ -10,5 +10,5 @@ weight = 0
 +++
 
 ### Notes
-
 - [CNN Notes Karpathy](/notes/CNN-Karpathy-CS231-Stanford)
+- [Python Tricks](/notes/tricks-python)
