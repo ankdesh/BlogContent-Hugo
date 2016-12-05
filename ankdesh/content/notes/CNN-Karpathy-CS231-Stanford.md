@@ -11,7 +11,7 @@ weight = 5
 ##### Notes for CNN course by Fei Fei, Andrej Karpathy, Justin Johnson [http://cs231n.stanford.edu/]
 Note that these are notes of the course notes. Only notable things I need to remember later are noted in the notes below :P 
 
-[Optimization] (https://docs.google.com/drawings/d/e/2PACX-1vQ8voz0bN0LZXRusAgRESWLxx5cQ0xsOu9xYw7L__FlQe1SlXjkh8wsSF_a4iq45Z9lPq0w005nybau/pub?w=960&amp;h=720)
+![Optimization] (https://docs.google.com/drawings/d/e/2PACX-1vQ8voz0bN0LZXRusAgRESWLxx5cQ0xsOu9xYw7L__FlQe1SlXjkh8wsSF_a4iq45Z9lPq0w005nybau/pub?w=593&h=205)
 
 ***
 ##### [Image classification](http://cs231n.github.io/classification/)
@@ -53,6 +53,7 @@ where we are using the notation \\(f_j\\) to mean the j-th element of the vector
 
 The Softmax classifier is hence minimizing the cross-entropy between the estimated class probabilities ( \\(q = e^{f_{y_i}} / \\sum_j e^{f_j} \\) as seen above) and the "true" distribution, which in this interpretation is the distribution where all probability mass is on the correct class (i.e. \\(p = [0, \\ldots 1, \\ldots, 0]\\) contains a single 1 at the \\(y_i\\) -th position.).
 
+
 ##### [Optimization: Stochastic Gradient Descent] (http://cs231n.github.io/linear-classify/)
 
 - Gradient can be computed in more than one ways. First is numerical gradient where we calculate the finite differnce of  function over a small change along each axix. Numerical gradient is easy to calculate. The other method is calculating analytical gradient which is error prone to find but is faster to compute.
@@ -61,4 +62,4 @@ The Softmax classifier is hence minimizing the cross-entropy between the estimat
 
 - Unlike the numerical gradient, calulating gradient analytically can be more error prone to implement. In practice it is very common to compute the analytic gradient and compare it to the numerical gradient to check the correctness of your implementation.
 
-- ** Mini batch gradient decent ** - In practice, we do not need to calculate the gradient over all the dataset. Just using a small minibatch and calculating gradient over the minibatch gives a good approximation of the gradient over full dataset. This works as the there is a correlation between the training data (we would not have not be able to learn anything if there was none). 
+- __Mini batch gradient decent__ - In practice, we do not need to calculate the gradient over all the dataset. Just using a small minibatch and calculating gradient over the minibatch gives a good approximation of the gradient over full dataset. This works as the there is a correlation between the training data (we would not have not be able to learn anything if there was none). 
