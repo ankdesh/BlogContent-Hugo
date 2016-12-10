@@ -1,8 +1,8 @@
 +++
 date = "2016-12-03T14:38:42+05:30"
 next = "/next/path"
-prev = "/prev/path"
-title = "Tricks python"
+prev = "/notes/CNN-Karpathy-CS231-Stanford"
+title = "Python Tricks"
 toc = true
 weight = 5
 
@@ -124,3 +124,14 @@ for x in l:
 {1: 'a', 2: 'n', 3: 'k', 4: 'u', 5: 'r'}
 ~~~
  
+### Python recipes
+
+* Sort a dictionary by value ( returns a sorted list of (key, value) pairs
+~~~
+sorted(d.items(), key=lambda x: x[1])
+~~~
+or
+~~~
+import operator
+sorted(d.items(), key=operator.itemgetter(1))
+~~~
