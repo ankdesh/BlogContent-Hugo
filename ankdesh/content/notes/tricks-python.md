@@ -135,3 +135,9 @@ or
 import operator
 sorted(d.items(), key=operator.itemgetter(1))
 ~~~
+
+* Read lines from stdin
+~~~
+import sys
+lines = sys.stdin.readlines()
+~~~
