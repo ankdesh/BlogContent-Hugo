@@ -2,21 +2,25 @@
 date = "2016-11-28T10:11:49+05:30"
 next = "/notes"
 prev = "/notes"
-title = "Notes for CS231-Stanford"
+title = "Notes-CS231-CNN"
 toc = true
 weight = 5
 
 +++
 
-##### Notes for CNN course by Fei Fei, Andrej Karpathy, Justin Johnson [http://cs231n.stanford.edu/]
-Note that these are notes of the course notes. Only notable things I need to remember later are noted in the notes below :P 
-
 ![Optimization] (https://docs.google.com/drawings/d/e/2PACX-1vQ8voz0bN0LZXRusAgRESWLxx5cQ0xsOu9xYw7L__FlQe1SlXjkh8wsSF_a4iq45Z9lPq0w005nybau/pub?w=593&h=205)
 
-***
-##### [Image classification](http://cs231n.github.io/classification/)
+##### Notes for Covolutional Neural Network course by Fei Fei, Andrej Karpathy, Justin Johnson (Stanford)
+##### [http://cs231n.stanford.edu/]
 
-- L1 vs. L2. It is interesting to consider differences between the two metrics. In particular, the L2 distance is much more unforgiving than the L1 distance when it comes to differences between two vectors. That is, the L2 distance prefers many medium disagreements to one big one. Some more details at (http://www.chioka.in/differences-between-l1-and-l2-as-loss-function-and-regularization/)
+{{% notice info %}}
+Note that these are notes of the course notes. Only notable things I need to remember later are noted in the notes below :P 
+{{% /notice %}}
+
+***
+##### Image classification [Original Notes](http://cs231n.github.io/classification/)
+
+- L1 vs. L2. It is interesting to consider differences between the two metrics. In particular, the L2 distance is much more unforgiving than the L1 distance when it comes to differences between two vectors. That is, the L2 distance prefers many medium disagreements to one big one. Some more details [here](http://www.chioka.in/differences-between-l1-and-l2-as-loss-function-and-regularization/)
 
 - Validation set size - If there are many hyperparameters to estimate, you should err on the side of having larger validation set to estimate them effectively. If you can afford the computational budget it is always safer to go with cross-validation (the more folds the better, but more expensive).
 
@@ -24,7 +28,7 @@ Note that these are notes of the course notes. Only notable things I need to rem
 
 - Take note of the hyperparameters that gave the best results. There is a question of whether you should use the full training set with the best hyperparameters, since the optimal hyperparameters might change if you were to fold the validation data into your training set (since the size of the data would be larger). In practice it is cleaner to not use the validation data in the final classifier and consider it to be burned on estimating the hyperparameters. Evaluate the best model on the test set. Report the test set accuracy and declare the result to be the performance of the kNN classifier on your data.
 
-##### [Linear Classification](http://cs231n.github.io/classification/)
+##### Linear Classification [Original Notes](http://cs231n.github.io/classification/)
 
 - Two functions needed for classification problem - a score function  \\( f: R^D \mapsto R^K  \\)  that maps the raw data to class scores, and a loss function that quantifies the agreement between the predicted scores and the ground truth labels. Classification can then be casted as an optimization problem in which we will minimize the loss function with respect to the parameters of the score function. 
 
@@ -51,10 +55,10 @@ where we are using the notation \\(f_j\\) to mean the j-th element of the vector
 
 - Information theory view for Softmax classifier - The cross-entropy between a "true" distribution \\(p\\) and an estimated distribution \\(q\\) is defined as: \\( H(p,q) = - \\sum_x p(x) \\log q(x) \\)
 
-The Softmax classifier is hence minimizing the cross-entropy between the estimated class probabilities ( \\(q = e^{f_{y_i}} / \\sum_j e^{f_j} \\) as seen above) and the "true" distribution, which in this interpretation is the distribution where all probability mass is on the correct class (i.e. \\(p = [0, \\ldots 1, \\ldots, 0]\\) contains a single 1 at the \\(y_i\\) -th position.).
+- The Softmax classifier is hence minimizing the cross-entropy between the estimated class probabilities ( \\(q = e^{f_{y_i}} / \\sum_j e^{f_j} \\) as seen above) and the "true" distribution, which in this interpretation is the distribution where all probability mass is on the correct class (i.e. \\(p = [0, \\ldots 1, \\ldots, 0]\\) contains a single 1 at the \\(y_i\\) -th position.).
 
 
-##### [Optimization: Stochastic Gradient Descent] (http://cs231n.github.io/linear-classify/)
+##### Optimization: Stochastic Gradient Descent [Original Notes](http://cs231n.github.io/linear-classify/)
 
 - Gradient can be computed in more than one ways. First is numerical gradient where we calculate the finite differnce of  function over a small change along each axix. Numerical gradient is easy to calculate. The other method is calculating analytical gradient which is error prone to find but is faster to compute.
 
