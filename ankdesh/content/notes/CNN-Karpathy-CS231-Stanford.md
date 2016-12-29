@@ -41,7 +41,7 @@ Note that these are notes of the course notes. Only notable things I need to rem
 - Multiclass Support Vector Machine loss - The SVM loss is set up so that the SVM "wants" the correct class for each image to a have a score higher than the incorrect classes by some fixed margin \\(\\Delta\\). 
 
 - The Multiclass SVM loss for the i-th example is then formalized as follows:
-\\( L_i = \\sum_{j\\neq y_i} \\max(0, s_j - s_{y_i} + \\Delta) \\)
+\\( L_i = \\sum_{j \\neq y_i} \\max(0, s_j - s_{y_i} + \\Delta) \\)
 where the score for the j-th class is \\( s_j = f(x_i, W)_j \\)
 
 - Note that the max function in SVM loss makes it a non-differentiable function. However the SVM is guaranteed to be a convex fucntion (which makes it easier to optimize as opposed to the non-convex functions). 
@@ -67,3 +67,8 @@ where we are using the notation \\(f_j\\) to mean the j-th element of the vector
 - Unlike the numerical gradient, calulating gradient analytically can be more error prone to implement. In practice it is very common to compute the analytic gradient and compare it to the numerical gradient to check the correctness of your implementation.
 
 - __Mini batch gradient decent__ - In practice, we do not need to calculate the gradient over all the dataset. Just using a small minibatch and calculating gradient over the minibatch gives a good approximation of the gradient over full dataset. This works as the there is a correlation between the training data (we would not have not be able to learn anything if there was none). 
+
+##### Back Propagation [Original Notes](http://cs231n.github.io/optimization-2/)
+
+- 
+
